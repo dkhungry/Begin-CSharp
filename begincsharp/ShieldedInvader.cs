@@ -19,7 +19,11 @@ namespace begincsharp
             {
                 base.DecreaseHealth(factor);
             }
-            throw new NotImplementedException();
+            else
+            {
+                Console.WriteLine("Shot at invader and missed due to shielding!");
+            }
+            
         }
     }
 }
