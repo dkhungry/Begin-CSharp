@@ -1,6 +1,6 @@
 using System;
 
-namespace TreehouseDefense
+namespace begincsharp
 {
     class Game
     {
