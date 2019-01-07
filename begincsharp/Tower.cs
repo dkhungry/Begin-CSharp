@@ -29,14 +29,14 @@ namespace begincsharp
             {
                 if(invader.IsActive && _location.InRangeOf(invader.Location, Range))
                 {
-                    Console.WriteLine(Name + " is firing!");
+                    Console.WriteLine(Name + " is firing at invader at " + invader.Location + "!");
                     if(IsSuccessfulShot())
                     {
                         invader.DecreaseHealth(Power);
                         Console.WriteLine("Shot at and hit an invader!");
                         if(invader.IsNeutralized)
                         {
-                            Console.WriteLine("Neutralized an invader!");
+                            Console.WriteLine("Neutralized an invader at " + invader.Location + "!");
                         }
                     }
                     else
