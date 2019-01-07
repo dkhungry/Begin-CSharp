@@ -8,6 +8,8 @@ namespace begincsharp
     {
         private static System.Random _random = new System.Random();
 
+        public override int Health { get; protected set; }
+
         public ShieldedInvader(Path path) : base(path)
         {
 
