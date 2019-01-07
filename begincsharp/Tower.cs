@@ -7,6 +7,7 @@ namespace begincsharp
         protected virtual int Range { get; } = 1;
         protected virtual int Power { get; } = 1;
         protected virtual double Accuracy { get; } = .75;
+        protected virtual string Name => this.GetType().Name;
         
         private static readonly Random _random = new Random();
         
@@ -28,6 +29,7 @@ namespace begincsharp
             {
                 if(invader.IsActive && _location.InRangeOf(invader.Location, Range))
                 {
+                    Console.WriteLine(Name + " is firing!");
                     if(IsSuccessfulShot())
                     {
                         invader.DecreaseHealth(Power);
