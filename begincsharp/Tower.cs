@@ -29,7 +29,7 @@ namespace begincsharp
             {
                 if(invader.IsActive && _location.InRangeOf(invader.Location, Range))
                 {
-                    Console.WriteLine(Name + " is firing at invader at " + invader.Location + "!");
+                    Console.WriteLine(Name + " is firing at " + invader.GetType().Name + " at " + invader.Location + "!");
                     if(IsSuccessfulShot())
                     {
                         invader.DecreaseHealth(Power);
